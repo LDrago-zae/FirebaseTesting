@@ -22,6 +22,7 @@ public class PhoneNumberActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private String verificationId;
+    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

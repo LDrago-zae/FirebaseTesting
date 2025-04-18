@@ -47,6 +47,12 @@ public class LoginActivity extends AppCompatActivity {
         // Set click listener for "Already have an account?" button
         Button buttonRegister = findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(v -> goToSignUpActivity());
+
+        Button googleLogin = findViewById(R.id.googleLogin);
+        googleLogin.setOnClickListener(v -> {
+            // Handle Google login here
+            Toast.makeText(LoginActivity.this, "Google login clicked", Toast.LENGTH_SHORT).show();
+        });
     }
 
     private void loginUser() {
