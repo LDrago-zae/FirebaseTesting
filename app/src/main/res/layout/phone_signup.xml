@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Phone Number Sign Up"
+        android:textSize="24sp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Phone number input -->
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:autofillHints="phone"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        android:minHeight="48dp" />
+
+    <!-- OTP input (Initially hidden) -->
+    <EditText
+        android:id="@+id/editTextOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter OTP"
+        android:autofillHints="oneTimeCode"
+        android:layout_marginBottom="8dp"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:visibility="gone" />
+
+    <!-- Button to send OTP -->
+    <Button
+        android:id="@+id/buttonSendOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send OTP"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Button to verify OTP (sign up) -->
+    <Button
+        android:id="@+id/buttonVerifyOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP and Sign Up"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <!-- ProgressBar for loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <!-- Button to go to login screen -->
+    <Button
+        android:id="@+id/buttonLoginRedirect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Already have an account? Login here"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

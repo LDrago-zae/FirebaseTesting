@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Firebase Testing</string>
+    <string name="logout">Logout</string>
+    <string name="phone">Phone</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="firebase_auth_demo">Firebase Auth Demo</string>
+    <string name="enter_otp">Enter OTP</string>
+</resources>
