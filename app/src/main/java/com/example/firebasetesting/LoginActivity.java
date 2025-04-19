@@ -72,6 +72,13 @@ public class LoginActivity extends AppCompatActivity {
         Button buttonUsePhone = findViewById(R.id.buttonSwitchToPhone);
         Button googleLogin = findViewById(R.id.googleLogin);
 
+        // Initialize AddData button
+        Button addData = findViewById(R.id.addData);
+        addData.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, AddData.class);
+            startActivity(intent);
+        });
+
         // Set initial visibility
         editTextEmail.setVisibility(View.VISIBLE);
         editTextPassword.setVisibility(View.VISIBLE);
