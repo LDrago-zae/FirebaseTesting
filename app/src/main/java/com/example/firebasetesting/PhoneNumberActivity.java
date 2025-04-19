@@ -39,6 +39,13 @@ public class PhoneNumberActivity extends AppCompatActivity {
 
         buttonSendOTP.setOnClickListener(v -> sendOTP());
         buttonVerifyOTP.setOnClickListener(v -> verifyOTP());
+
+        Button buttonLoginRedirect = findViewById(R.id.buttonLoginRedirect);
+        buttonLoginRedirect.setOnClickListener(v -> {
+            Intent intent = new Intent(PhoneNumberActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void sendOTP() {

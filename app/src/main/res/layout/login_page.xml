@@ -16,44 +16,76 @@
         android:layout_gravity="center"
         android:layout_marginBottom="32dp"/>
 
+    <!-- Switch Buttons -->
+    <Button
+        android:id="@+id/buttonSwitchToEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use Email/Password"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/buttonSwitchToPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use Phone Number"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Email/Password Fields -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:autofillHints="emailAddress"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:visibility="gone" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:autofillHints="password"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:visibility="gone" />
 
+    <!-- Phone Field -->
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:autofillHints="phone"
         android:hint="@string/phone"
         android:inputType="phone"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:visibility="gone" />
 
+    <EditText
+        android:id="@+id/editTextOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_otp_btn"
+        android:inputType="number"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonVerifyOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_otp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/buttonRegister"
@@ -67,14 +99,13 @@
         android:layout_height="wrap_content"
         android:text="Sign In with Google"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/common_google_signin_btn_icon_dark"/>
+        android:layout_marginBottom="8dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_gravity="center"
         android:visibility="gone"/>
-
 </LinearLayout>
