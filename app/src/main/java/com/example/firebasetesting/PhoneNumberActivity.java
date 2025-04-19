@@ -22,7 +22,6 @@ public class PhoneNumberActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private String verificationId;
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +79,17 @@ public class PhoneNumberActivity extends AppCompatActivity {
             Toast.makeText(PhoneNumberActivity.this, "OTP Sent", Toast.LENGTH_SHORT).show();
         }
     };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Check if the user is already logged in
+        if (mAuth.getCurrentUser() != null) {
+            // If user is logged in, go to HomeActivity directly
+            startActivity(new Intent(PhoneNumberActivity.this, HomeActivity.class));
+            finish();
+        }
+    }
 
     private void verifyOTP() {
         String code = editTextOTP.getText().toString().trim();
